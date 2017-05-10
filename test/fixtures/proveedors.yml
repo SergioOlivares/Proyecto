@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rut_integer: MyString
+  nombre: MyString
+  direccion: MyString
+  telefono: 1
+  mail: MyString
+
+two:
+  rut_integer: MyString
+  nombre: MyString
+  direccion: MyString
+  telefono: 1
+  mail: MyString

@@ -1,0 +1,2 @@
+class ProveedorInsumo < ApplicationRecord
+end
