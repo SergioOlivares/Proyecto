@@ -1,0 +1,2 @@
+class PlatoPedido < ApplicationRecord
+end
