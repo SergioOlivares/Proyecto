@@ -1,0 +1,2 @@
+class InsumoPlato < ApplicationRecord
+end
