@@ -1,0 +1,2 @@
+module PlatoPedidoHelper
+end
