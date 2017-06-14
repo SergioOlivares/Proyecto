@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mesas</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Cantidadpersonas</th>
+      <th>Ubicacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mesas.each do |mesa| %>
+      <tr>
+        <td><%= mesa.cantidadpersonas %></td>
+        <td><%= mesa.ubicacion %></td>
+        <td>
+          <%= link_to 'Mostrar', mesa, :class => "button" %></td>
+        <td> <%= link_to 'Editar', edit_mesa_path(mesa), :class => "button"%></td>
+        <td><%= link_to 'Destruir', mesa, method: :delete, data: { confirm: 'Estas seguro?' },:class => "button" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<div>
+<%= link_to 'Nueva Mesa', new_mesa_path,:class => "button" %>
+</div>
