@@ -1,0 +1,27 @@
+<%= form_for(plato_pedido) do |f| %>
+  <% if plato_pedido.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(plato_pedido.errors.count, "error") %> prohibited this plato_pedido from being saved:</h2>
+
+      <ul>
+      <% plato_pedido.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :plato_id %>
+    <%= f.number_field :plato_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pedido_id %>
+    <%= f.text_area :pedido_id%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Crear" %>
+  </div>
+<% end %>

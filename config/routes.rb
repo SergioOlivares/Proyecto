@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :proveedor_insumos
   resources :mesas
   resources :proveedors
+  resources :insumos
+  resources :platos
+  resources :plato_pedidos
   get 'welcome/index'
 
   root 'welcome#index'
