@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Insumo Platos</h1>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Cantidadusada</th>
+    <th>Unidadmedida</th>
+    <th>Insumo</th>
+    <th>Plato</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%= insumo_platos.each do |insumo_plato| %>
+      <tr>
+        <td><%= insumo_plato.cantidadusada %></td>
+        <td><%= insumo_plato.unidadmedida %></td>
+        <td><%= insumo_plato.insumo %></td>
+        <td><%= insumo_plato.plato %></td>
+        <td>
+          <div> <%= link_to 'Mostrar', insumo_plato, :class => "button" %> </div>
+        </td>
+        <td>
+          <div> <%= link_to 'Editar', edit_insumo_plato_path(insumo_plato), :class => "button" %> </div>
+        </td>
+        <td>
+          <div> <%= link_to 'Destruir', insumo_plato, method: :delete, data: {confirm: 'Estas seguro?' }, class: => "button" %> </div>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+<div>
+  <%= link_to 'Nuevo Insumo Plato', new_insumo_plato_path, :class => "button" %>
+</div>

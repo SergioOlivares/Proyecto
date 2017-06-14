@@ -1,0 +1,52 @@
+<%= form_for(empleado) do |f| %>
+<% if empleado.errors.any? %>
+<div id="error_explanation">
+  <h2>
+    <%= pluralize(empleado.errors.count, "error") %>
+  </h2>
+  <ul>
+    <% empleado.errors.full_messages.each do |message| %>
+    <li> <%= message %> </li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+    <div class="field">
+      <%= f.label :rut %>
+      <%= f.text_field :rut %>
+    </div>
+
+    <div class="field">
+      <%= f.label :rut %>
+      <%= f.text_field :rut %>
+    </div>
+
+    <div class="field">
+      <%= f.label :nombre %>
+      <%= f.text_field :nombre %>
+    </div>
+
+    <div class="field">
+      <%= f.label :telefono %>
+      <%= f.text_field :telefono %>
+    </div>
+
+    <div class="field">
+      <%= f.label :direccion %>
+      <%= f.text_field :direccion %>
+    </div>
+
+    <div class="field">
+      <%= f.label :cargo %>
+      <%= f.text_field :cargo %>
+    </div>
+
+    <div class="field">
+      <%= f.label :turno %>
+      <%= f.text_field :turno %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Crear" %>
+    </div>
+<% end %>

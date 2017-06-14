@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Empleados</h1>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Rut</th>
+    <th>Nombre</th>
+    <th>Telefono</th>
+    <th>Direccion</th>
+    <th>Cargo</th>
+    <th>Turno</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <%= @empleados.each do |empleado| %>
+    <tr>
+      <td><%= empleado.rut %></td>
+      <td><%= empleado.nombre %></td>
+      <td><%= empleado.telefono %></td>
+      <td><%= empleado.direccion %></td>
+      <td><%= empleado.cargo %></td>
+      <td><%= empleado.turno %></td>
+      <td>
+        <div> <%= link_to 'Mostrar', empleado, :class => "button" %> </div>
+      </td>
+      <td>
+        <div> <%= link_to 'Editar', edit_empleado_path(empleado), :class => "button" %> </div>
+      </td>
+      <td>
+        <div> <%= link_to 'Destruir', empleado, method: :delete, data: {confirm: 'Estas seguro?' }, class: => "button" %> </div>
+      </td>
+    </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<br>
+<div>
+  <%= link_to 'Nuevo Empleado', new_empleado_path, :class => "button" %>
+</div>
