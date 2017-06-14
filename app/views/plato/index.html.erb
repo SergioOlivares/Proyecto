@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Insumos</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Precio</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @platos.each do |mesa| %>
+      <tr>
+        <td><%= platos.nombre %></td>
+        <td><%= platos.tipo %></td>
+        <td><%= platos.precio %></td>
+        <td><%= platos.descripcion %></td>
+        <td>
+          <%= link_to 'Mostrar', plato, :class => "button" %></td>
+        <td> <%= link_to 'Editar', edit_plato_path(plato), :class => "button"%></td>
+        <td><%= link_to 'Destruir', plato, method: :delete, data: { confirm: 'Estas seguro?' },:class => "button" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<div>
+<%= link_to 'Nuevo Plato', new_plato_path,:class => "button" %>
+</div>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @proveedor_insumo.precio %>
+</p>
+
+<p>
+  <strong>Proveedor:</strong>
+  <%= @proveedor_insumo.proveedor %>
+</p>
+
+<p>
+  <strong>Insumo:</strong>
+  <%= @proveedor_insumo.insumo %>
+</p>
+
+<%= link_to 'Editar', edit_proveedor_insumo_path(@proveedor_insumo) %> |
+<%= link_to 'Volver', proveedor_insumos_path %>

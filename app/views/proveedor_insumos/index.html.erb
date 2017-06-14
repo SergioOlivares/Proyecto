@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Proveedor Insumos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Precio</th>
+      <th>Proveedor</th>
+      <th>Insumo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proveedor_insumos.each do |proveedor_insumo| %>
+      <tr>
+        <td><%= proveedor_insumo.precio %></td>
+        <td><%= proveedor_insumo.proveedor %></td>
+        <td><%= proveedor_insumo.insumo %></td>
+        <td><%= link_to 'Mostra', proveedor_insumo %></td>
+        <td><%= link_to 'Editar', edit_proveedor_insumo_path(proveedor_insumo) %></td>
+        <td><%= link_to 'Destruir', proveedor_insumo, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proveedor Insumo', new_proveedor_insumo_path %>

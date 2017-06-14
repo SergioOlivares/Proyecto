@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plato_id:</strong>
+  <%= @plato_pedido.plato_id %>
+</p>
+
+<p>
+  <strong>Pedido_id:</strong>
+  <%= @plato_pedido.pedido_id %>
+</p>
+
+<%= link_to 'Editar', edit_plato_pedido_path(@plato_pedido) %> |
+<%= link_to 'Volver', plato_pedidos_path %>
